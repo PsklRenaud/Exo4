@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserProfileComponent implements OnInit {
   User = {
     name : 'Doe',
-    firstName : 'John',
+    firstName : 'patrick',
     age : 25,
     quote : '',
     photo : 'https://randomuser.me/api/portraits/lego/2.jpg'
@@ -16,12 +16,17 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const age=document.getElementById("age");
-    const boutonMort=document.getElementById("boutonMort");
-  
-      boutonMort.addEventListener("click", function() {
-      age.classList.add("hidden");
-  
-    });
+
   }
-}
+  FonctionDeTaRace() {
+    const age=document.getElementById("age");
+    if (age.hidden){
+      age.hidden=false
+    }
+    else {
+      age.hidden=true
+    }
+
+    }
+  }
+
